@@ -18,8 +18,11 @@ This Sketch is created by Me Samir eltabal ( fb.com/xsolyx )
 
 #Change Log
 
-v 0.0.2
- Order Motors by Degrees instead of steeps ( 0 - 360 ) ;
- Seperators has changed Orders Single Order ( 200-100 ) , Multiple Orders ( 360-0&230-120 ) ;
-v 0.0.1 
- Initial setup
+v 0.0.2  . 
+ 1. Order Motors by Degrees instead of steeps ( 0 - 360 ) .
+ 
+ 2. Seperators has changed Orders Single Order ( 200-100 ) ; Multiple Orders ( 360-0&230-120 ) .
+ 
+ 
+v 0.0.1 .
+ 1. Initial setup
