@@ -31,18 +31,25 @@ char* command = strtok(input, "&");
 while (command != 0)
 {
     // Split the command in two values
-    char* separator = strchr(command, ':');
+    char* separator = strchr(command, '-');
     if (separator != 0)
     {
         // Actually split the string in 2: replace ':' with 0
         *separator = 0;
-        int servoId = atoi(command);
+        int motor1Degres = atoi(command);
         ++separator;
-        int position = atoi(separator);
+        int motor2Degres = atoi(separator);
+
+        int steps1 = stepCalc(motor1Degres);
+        int steps2 = stepCalc(motor2Degres);
          small_stepper.setSpeed(600);   
-         small_stepper2.setSpeed(600);   
-         small_stepper.step(servoId);
-         small_stepper2.step(position);
+         small_stepper2.setSpeed(600);       
+         small_stepper.step(steps1);
+         small_stepper2.step(steps2);
+         Serial.print("Motor 1 : ");
+         Serial.println(steps1);
+         Serial.print("Motor 2 : ");
+         Serial.println(steps2);
   delay(10);
   
     }
@@ -53,7 +60,13 @@ while (command != 0)
    
 }/* --(end main loop )-- */
 
-
+int stepCalc(int degres) {
+ int result;
+ double mathVal = 2048.00 / 360.00 ; 
+ double FLSteps2Take = degres * mathVal ;
+ Steps2Take = (int) FLSteps2Take;
+result = Steps2Take; 
+return result;
+}
 
 /* ( THE END ) */
-
