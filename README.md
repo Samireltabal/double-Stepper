@@ -10,8 +10,16 @@ you can send serial data using any method like ( i2c , uart , or via serial moni
 
 3. open serial monitor on your arduino IDE
 
-4. send steps like (  StepsForMotor1:StepsForMotor2 )
+4. send steps like (  DegreesForMotor1-DegreesForMotor2 )
 
-5. Multiple orders  ( StepsForMotor1:StepsForMotor2&StepsForMotor1:StepsForMotor2 ) 
+5. Multiple orders  ( DegreesForMotor1-DegreesForMotor2&DegreesForMotor1-DegreesForMotor2 ) 
 
 This Sketch is created by Me Samir eltabal ( fb.com/xsolyx ) 
+
+#Change Log
+
+v 0.0.2
+ Order Motors by Degrees instead of steeps ( 0 - 360 ) ;
+ Seperators has changed Orders Single Order ( 200-100 ) , Multiple Orders ( 360-0&230-120 ) ;
+v 0.0.1 
+ Initial setup
